@@ -7,7 +7,9 @@ public class CrawlerTest {
 
     @Test
     public void shouldVisitThePage() {
-        Crawler crawler = new Crawler("http://www.google.com");
-        crawler.crawl("http://www.google.com", 0);
+        Crawler crawler = new Crawler("http://wiprodigital.com");
+        Footstep footstep = new Footstep("http://wiprodigital.com");
+        crawler.crawl("http://wiprodigital.com", 0, footstep);
+        crawler.writeSiteMapToFile(footstep);
     }
 }
